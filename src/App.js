@@ -64,7 +64,7 @@ const App = ({ signOut }) => {
     await Storage.remove(name);
     await API.graphql({
       query: deleteNoteMutation,
-      variables: { input: { id, _version } },
+      variables: { input: { id: id, _version: _version } },
     });
   }
 
